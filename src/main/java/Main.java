@@ -1,4 +1,5 @@
 import charpter1.di.GreetingService;
+import charpter1.droid.Kdroid;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,10 +10,10 @@ import org.springframework.core.io.FileSystemResource;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("greeting.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("droid.xml");
 
-        GreetingService greetingService = (GreetingService) beanFactory.getBean("greetingService");
+        Kdroid kdroid = (Kdroid) beanFactory.getBean("kdroid");
 
-        greetingService.sayHi();
+        System.out.println(kdroid.workOnTadk());
     }
 }

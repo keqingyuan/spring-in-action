@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="driveTask" class="charpter1.droid.DriveTask"/> <!--定义一个开车的任务-->
+    <bean id="cleanTask" class="charpter1.droid.CleanTask"/><!--定义一个清扫的任务-->
+
+    <bean id="kdroid" class="charpter1.droid.Kdroid"> <!--定义机器人-->
+        <constructor-arg value="onion"/>
+        <property name="task" ref="cleanTask"/>
+    </bean>
 </beans>

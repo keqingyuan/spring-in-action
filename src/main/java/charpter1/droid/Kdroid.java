@@ -7,7 +7,7 @@ public class Kdroid {
 
     private String name;
 
-    private DriveTask driveTask;
+    private Task driveTask;
 
     public Kdroid(String name) {
         this.name = name;
@@ -16,5 +16,9 @@ public class Kdroid {
 
     public String workOnTadk() {
         return driveTask.doing();
+    }
+
+    public void setTask(Task task) {
+        this.driveTask = task;
     }
 }
