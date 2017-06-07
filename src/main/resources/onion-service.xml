@@ -7,5 +7,5 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!-- 装配包扫描器-->
-    <context:component-scan base-package="chapter13.mvc.service"/>
+    <context:component-scan base-package="chapter13.mvc"/>
 </beans>
